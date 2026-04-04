@@ -1,12 +1,12 @@
 import sys   # Import sys module to access system-specific parameters and exception info
-import logging
+from src.logger import logging
 
 # Function to format detailed error messages
 def error_message_detail(error, error_detail: sys):
     
     # Get exception information (type, value, traceback)
     _, _, exc_tb = error_detail.exc_info()
-    
+     
     # Get the file name where the exception occurred
     file_name = exc_tb.tb_frame.f_code.co_filename
     
